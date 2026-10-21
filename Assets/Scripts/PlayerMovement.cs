@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] AudioSource audioSource;
 
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float jumpHeight = 25f;
     Animator myAnimator;
 
     void Start()
@@ -28,6 +29,14 @@ public class Movement : MonoBehaviour
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+    }
+
+    void OnJump(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            myRigidbody.linearVelocity += new Vector2(0f, jumpHeight);
+        }
     }
 
     void Run()

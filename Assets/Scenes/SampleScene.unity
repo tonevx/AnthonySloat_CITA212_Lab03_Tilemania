@@ -62525,6 +62525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   audioSource: {fileID: 833261381}
   moveSpeed: 5
+  jumpHeight: 20
 --- !u!114 &833261375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83270,6 +83271,10 @@ PrefabInstance:
     - target: {fileID: 4657090270994008850, guid: f39a32d3d1071c44fa1264cbf7b075ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6569961712093752594, guid: f39a32d3d1071c44fa1264cbf7b075ec, type: 3}
+      propertyPath: m_GravityScale
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
