@@ -12,12 +12,14 @@ public class Movement : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float jumpHeight = 25f;
     Animator myAnimator;
+    CapsuleCollider2D capsuleCollider2D;
 
     void Start()
     {
       myRigidbody = GetComponent<Rigidbody2D>();  
       audioSource = GetComponent<AudioSource>();
       myAnimator = GetComponent<Animator>();
+      capsuleCollider2D = GetComponent<CapsuleCollider2D>();
     }
 
     void Update()
@@ -33,6 +35,7 @@ public class Movement : MonoBehaviour
 
     void OnJump(InputValue value)
     {
+        if(!capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
         if(value.isPressed)
         {
             myRigidbody.linearVelocity += new Vector2(0f, jumpHeight);
