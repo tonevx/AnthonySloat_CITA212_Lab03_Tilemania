@@ -1,4 +1,5 @@
 using System;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -78,10 +79,13 @@ public class Movement : MonoBehaviour
         if(!capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Climbing"))) 
         { 
             myRigidbody.gravityScale = gravityScaleAtStart;
+            myAnimator.SetBool("isClimbing", false);
             return; 
         }
         myRigidbody.gravityScale = 0f;
         Vector2 climbVelocity = new Vector2(myRigidbody.linearVelocity.x, moveInput.y * climbSpeed);
         myRigidbody.linearVelocity = climbVelocity;
+        bool hasVerticality = Mathf.Abs(myRigidbody.linearVelocity.y) > Mathf.Epsilon;
+        myAnimator.SetBool("isClimbing", hasVerticality);
     }
 }
