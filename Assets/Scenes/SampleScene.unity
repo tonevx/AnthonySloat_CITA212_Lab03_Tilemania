@@ -70855,13 +70855,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sloob (Enemy) (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 158650728353101279, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.3
       objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.498
+      value: -11.675
       objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100289,13 +100293,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sloob (Enemy) (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 158650728353101279, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 51.7
       objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.49
+      value: -9.636
       objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100644,13 +100652,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sloob (Enemy) (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 158650728353101279, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.518
+      value: -6.68
       objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100701,13 +100713,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sloob (Enemy)
       objectReference: {fileID: 0}
+    - target: {fileID: 158650728353101279, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.42
       objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.54
+      value: -5.69
       objectReference: {fileID: 0}
     - target: {fileID: 6578955986386243718, guid: 4bddcb76fcd2c594d86265e059982b57, type: 3}
       propertyPath: m_LocalPosition.z
@@ -100797,18 +100813,6 @@ PrefabInstance:
     - target: {fileID: 4657090270994008850, guid: f39a32d3d1071c44fa1264cbf7b075ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569961712093752594, guid: f39a32d3d1071c44fa1264cbf7b075ec, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706346248225215063, guid: f39a32d3d1071c44fa1264cbf7b075ec, type: 3}
-      propertyPath: m_Size.y
-      value: 0.1429351
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706346248225215063, guid: f39a32d3d1071c44fa1264cbf7b075ec, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.43971768
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
