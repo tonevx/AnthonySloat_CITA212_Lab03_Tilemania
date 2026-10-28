@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,7 +18,11 @@ public class Movement : MonoBehaviour
     CapsuleCollider2D capsuleCollider2D;
     BoxCollider2D footCollider2D;
 
+    CinemachineImpulseSource impulseSource;
+
     float gravityScaleAtStart;
+
+    bool isAlive = true;
 
     void Start()
     {
@@ -27,17 +32,21 @@ public class Movement : MonoBehaviour
       capsuleCollider2D = GetComponent<CapsuleCollider2D>();
       gravityScaleAtStart = myRigidbody.gravityScale;
       footCollider2D = GetComponent<BoxCollider2D>();
+      impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     void Update()
     {
+        if (!isAlive) { return; }
         Run();
         FlipSprite();
         ClimbLadder();
+        Death();
     }
 
     void OnMove(InputValue value)
     {
+        if(!isAlive){return;}
         moveInput = value.Get<Vector2>();
     }
 
@@ -89,5 +98,18 @@ public class Movement : MonoBehaviour
         myRigidbody.linearVelocity = climbVelocity;
         bool hasVerticality = Mathf.Abs(myRigidbody.linearVelocity.y) > Mathf.Epsilon;
         myAnimator.SetBool("isClimbing", hasVerticality);
+    }
+
+    void Death()
+    {
+        if (capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        {
+            isAlive = false;
+            myAnimator.SetTrigger("Dying");
+            if (impulseSource != null)
+            {
+                impulseSource.GenerateImpulse();
+            }
+        }
     }
 }
