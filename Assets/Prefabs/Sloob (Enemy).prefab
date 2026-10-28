@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7649763816922437498}
   - component: {fileID: 1660870499148365049}
   - component: {fileID: 1432706930384953311}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sloob (Enemy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
