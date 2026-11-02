@@ -114628,9 +114628,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3652307226495549033, guid: ed484691002b6434f8829bbbdfcf381d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652307226495549033, guid: ed484691002b6434f8829bbbdfcf381d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652307226495549033, guid: ed484691002b6434f8829bbbdfcf381d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5281051312577937694, guid: ed484691002b6434f8829bbbdfcf381d, type: 3}
       propertyPath: m_Name
       value: ScenePersist
+      objectReference: {fileID: 0}
+    - target: {fileID: 8704282150524397602, guid: ed484691002b6434f8829bbbdfcf381d, type: 3}
+      propertyPath: m_Name
+      value: BigCoin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
