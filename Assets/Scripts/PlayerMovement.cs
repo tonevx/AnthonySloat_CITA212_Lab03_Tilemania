@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using NUnit.Framework;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class Movement : MonoBehaviour
     Rigidbody2D myRigidbody;
 
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource mainMusic;
 
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float jumpHeight = 25f;
@@ -36,6 +38,8 @@ public class Movement : MonoBehaviour
       gravityScaleAtStart = myRigidbody.gravityScale;
       footCollider2D = GetComponent<BoxCollider2D>();
       impulseSource = GetComponent<CinemachineImpulseSource>();
+      mainMusic = GetComponent<AudioSource>();
+      mainMusic.Play();
     }
 
     void Update()
@@ -66,6 +70,10 @@ public class Movement : MonoBehaviour
     {
         if (!isAlive) {return;}
         Instantiate(bullet, gun.position, transform.rotation);
+        if (value.isPressed)
+        {
+            myAnimator.SetTrigger("Shooting");
+        }
     }
 
     void Run()
@@ -111,6 +119,7 @@ public class Movement : MonoBehaviour
 
     void Death()
     {
+        if(!isAlive) {return;}
         if (capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")) || footCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy")))
         {
             isAlive = false;
@@ -120,6 +129,6 @@ public class Movement : MonoBehaviour
             {
                 impulseSource.GenerateImpulse();
             }
-        }
+        }       
     }
 }

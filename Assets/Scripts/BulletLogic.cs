@@ -7,11 +7,13 @@ public class BulletLogic : MonoBehaviour
 
    float xSpeed;
    Movement player;
+   GameSession gameSession;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = FindAnyObjectByType<Movement>(); //again, FindFirstObjectByType is deprecated.
         xSpeed = player.transform.localScale.x * bulletSpeed;
+        gameSession = FindAnyObjectByType<GameSession>();
     }
 
     void Update()
@@ -26,6 +28,7 @@ public class BulletLogic : MonoBehaviour
             Destroy(collision.gameObject);
         }
         Destroy(gameObject);
+        gameSession.AddToScore(150);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
